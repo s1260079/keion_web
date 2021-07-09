@@ -21,7 +21,7 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Part", with: @user.part
     fill_in "Salt", with: @user.salt
     fill_in "String", with: @user.string
-    fill_in "Studentid", with: @user.studentID
+    fill_in "", with: @user.
     fill_in "Username", with: @user.username
     click_on "Create User"
 
@@ -40,7 +40,7 @@ class UsersTest < ApplicationSystemTestCase
     fill_in "Part", with: @user.part
     fill_in "Salt", with: @user.salt
     fill_in "String", with: @user.string
-    fill_in "Studentid", with: @user.studentID
+    fill_in "", with: @user.
     fill_in "Username", with: @user.username
     click_on "Update User"
 
