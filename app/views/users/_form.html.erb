@@ -11,52 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
-  </div>
+  <div class="form-group">
 
-  <div class="field">
-    <%= form.label :studentID %>
-    <%= form.text_field :studentID %>
-  </div>
+    <div class="form-control">
+      <%= form.label :user_name %>
+      <%= form.text_field :user_name %>
+    </div>
 
-  <div class="field">
-    <%= form.label :string %>
-    <%= form.text_field :string %>
-  </div>
+    <div class="form-control">
+      <%= form.label :student_id %>
+      <%= form.text_field :student_id %>
+    </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+    <div class="form-control">
+      <%= form.label :email %>
+      <%= form.text_field :email %>
+    </div>
 
-  <div class="field">
-    <%= form.label :crypted_password %>
-    <%= form.text_field :crypted_password %>
-  </div>
+    <div class="form-control">
+      <%= form.label :password %><br />
+      <%= form.password_field :password %>
+    </div>
 
-  <div class="field">
-    <%= form.label :salt %>
-    <%= form.text_field :salt %>
-  </div>
+    <div class="form-control">
+      <%= form.label :password_confirmation %><br />
+      <%= form.password_field :password_confirmation %>
+    </div>
 
-  <div class="field">
-    <%= form.label :part %>
-    <%= form.text_field :part %>
-  </div>
-
-  <div class="field">
-    <%= form.label :likeBand %>
-    <%= form.text_area :likeBand %>
-  </div>
-
-  <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>

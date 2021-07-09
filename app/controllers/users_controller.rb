@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  skip_before_action :require_login, only: [:index, :new, :create]
 
   # GET /users or /users.json
   def index
@@ -38,6 +39,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
+        redirect_to(:users, notice: 'User was successfully created')
         format.html { redirect_to @user, notice: "User was successfully updated." }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -64,6 +66,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:username, :studentID, :string, :email, :crypted_password, :salt, :part, :likeBand, :message)
+      params.require(:user).permit(:user_name, :student_id, :email, :password, :password_confirmation , :part, :like_band, :message)
     end
 end
