@@ -1,40 +1,48 @@
-<div id="nav">
-  <% if current_user %>
-    <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-    <%= link_to "Logout", :logout, method: :post %>
-  <% else %>
-    <%= link_to "Register", new_user_path %> |
-    <%= link_to "Login", :login %>
-  <% end %>
-  <div>
-
-    <%= link_to "Home", root_path %>
-    <%= link_to "Users", users_path %>
-    <%= link_to "Bands", bands_path %>
-  </div>
-
-</div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class: 'nav-link active' %>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+<div class="container">
+  <div class="row">
+    <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">
+            <a class="navbar-brand display-5" href="#">CUO official</a>
+          </span>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <%= link_to "HOME", root_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "MEMBER", users_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "BAND", bands_path, class: 'nav-link' %>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav d-flex">
+            <% if current_user %>
+          <li class="nav-item">
+            <%= link_to "Edit Profile", edit_user_path(current_user.id), class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Logout", :logout, method: :post, class: 'nav-link' %>
+          </li>
+          <% else %>
+          <li class="nav-item">
+            <%= link_to "Register", new_user_path, class: 'nav-link'%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Login", :login, class: 'nav-link'%>
+          </li>
+          <% end %>
+          </ul>
+          </div>
+        </div>
+      </nav>
     </div>
   </div>
-</nav>
+</div>
