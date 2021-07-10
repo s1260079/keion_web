@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  get 'bands/index'
-  get 'bands/new'
-  get 'bands/edit'
-  get 'bands/show'
   root to: 'home#index'
   resources :users
+  resources :bands
 
   get 'login', to: 'user_sessions#new', as: 'login'
   post 'login', to: "user_sessions#create"
