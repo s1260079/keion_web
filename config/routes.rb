@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'bands/index'
+  get 'bands/new'
+  get 'bands/edit'
+  get 'bands/show'
   root to: 'home#index'
   resources :users
 
