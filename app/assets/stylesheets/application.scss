@@ -1,5 +1,15 @@
  @import 'bootstrap';
-
- body{
-  background-color: $light;
-}
+ body {
+     background-color: $light;
+ }
+ 
+ h1 {
+     font-weight: 700;
+     margin-top: 80px;
+     font-size: 30px;
+ }
+ 
+ .homePage {
+     width: 800px;
+     margin: auto;
+ }
