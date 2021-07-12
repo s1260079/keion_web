@@ -22,20 +22,25 @@
             </ul>
           </div>
           <ul class="navbar-nav d-flex">
-            <% if current_user %>
-          <li class="nav-item">
-            <%= link_to "Edit Profile", edit_user_path(current_user.id), class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Logout", :logout, method: :post, class: 'nav-link' %>
-          </li>
+          <% if current_user %>
+            <li class='nav-item dropdown dropdown-slide'>
+              <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="header-profile">
+                <%= image_tag 'sample.png', size: '40x40', class: 'rounded-circle mr15'%>
+              </a>
+              <div class='dropdown-menu dropdown-menu-right'>
+                <div class='dropdown-item'>名前</div>
+                <div class='dropdown-divider'></div>
+                <%= link_to "Profile", edit_user_path(current_user.id), class: 'dropdown-item' %>
+                <%= link_to "Logout", :logout, method: :post, class: 'dropdown-item' %>
+              </div>
+            </li>
           <% else %>
-          <li class="nav-item">
-            <%= link_to "Register", new_user_path, class: 'nav-link'%>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Login", :login, class: 'nav-link'%>
-          </li>
+            <li class="nav-item">
+              <%= link_to "Register", new_user_path, class: 'nav-link'%>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Login", :login, class: 'nav-link'%>
+            </li>
           <% end %>
           </ul>
           </div>
