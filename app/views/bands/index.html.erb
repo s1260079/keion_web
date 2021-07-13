@@ -6,19 +6,16 @@
     </div>
   </div>
   <div style="text-align:center">
-    <% @bands.each do |band| %>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <%= link_to edit_band_path(band) %>
-            <div class="card-body">
-              <h5 class="card-title"><%=band.band_name %></h5>
-              <p class="card-text"><%=band.band_members %></p>
-              <p class="card-text"><%=band.band_message %></p>
+    <div class="card-columns">
+        <% @bands.each do |band| %>
+          <div class="card" style="width: 16rem;  height: 300px;  white-space: pre-wrap;" >
+            <div class="card-body " style="height: 200px;" >
+              <h5 class="card-title" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_name %></h5>
+              <p class="card-text" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_members %></p>
+              <p class="card-text" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_message %></p>
             </div>
           </div>
-          <p style="margin-top: 20px;"></p>
-        </div>
-    <% end %>
+        <% end %>
+    </div>
   </div>
 </div>
