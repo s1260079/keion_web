@@ -10,6 +10,7 @@
         <% @bands.each do |band| %>
           <div class="card" style="width: 16rem;  height: 300px;  white-space: pre-wrap;" >
             <div class="card-body " style="height: 200px;" >
+              <%= link_to 'Edit' ,edit_band_path(band) %>
               <h5 class="card-title" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_name %></h5>
               <p class="card-text" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_members %></p>
               <p class="card-text" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_message %></p>

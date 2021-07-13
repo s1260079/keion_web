@@ -25,7 +25,17 @@ class BandsController < ApplicationController
   end
 
   def edit
+    @band = Band.find(params[:id])
+  end
 
+  def update
+    @band = Band.find(params[:id])
+    if @band.update(band_params)
+      redirect_to root_path, notice: 'Success!'
+    else
+      flash[:alert] = 'Save error!'
+      render :edit
+    end
   end
 
   private
