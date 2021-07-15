@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_15_130358) do
+ActiveRecord::Schema.define(version: 2021_07_15_130831) do
 
   create_table "bands", force: :cascade do |t|
     t.string "band_name", null: false
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2021_07_15_130358) do
     t.string "salt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_name"
-    t.string "student_id"
+    t.string "user_name", null: false
+    t.string "student_id", null: false
     t.string "part"
     t.text "like_band"
     t.text "message"
