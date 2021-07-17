@@ -21,6 +21,6 @@ module Rails5Cuo
       g.helper false # helperファイル生成しない
       g.test_framework false # testファイル生成しない
       g.assets false # stylesheets, jsファイル生成を生成しない
-     end
+    end
   end
 end
