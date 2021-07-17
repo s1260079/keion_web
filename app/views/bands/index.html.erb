@@ -1,2 +1,23 @@
-<h1>Bands#index</h1>
-<p>Find me in app/views/bands/index.html.erb</p>
+<div class="container" style="width: 800px;">
+  <h1 style="text-align:center">Band Data</h1>
+  <div style="text-align:center">
+    <div class="text-center" style="margin-top: 40px; margin-bottom: 40px;">
+      <%= link_to 'バンドの登録はこちらから' , new_band_path %>
+    </div>
+  </div>
+  <div style="text-align:center">
+    <div class="card-columns">
+        <% @bands.each do |band| %>
+          <div class="card" style="width: 16rem;  height: 300px;  white-space: pre-wrap;" >
+            <div class="card-body " style="height: 200px;" >
+              <%= link_to 'Edit' ,edit_band_path(band) %>
+              [<%= link_to 'Delete' , band_path(band), method: :delete, data:{ confirm: 'Are you sure'} %>]
+              <h5 class="card-title" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_name %></h5>
+              <p class="card-text" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_members %></p>
+              <p class="card-text" style="margin-top: 0px; margin-bottom: 0px;"><%=band.band_message %></p>
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
