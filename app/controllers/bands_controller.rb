@@ -1,25 +1,25 @@
 class BandsController < ApplicationController
   protect_from_forgery
-  before_action :set_band, only: [:show, :edit, :update, :destroy]
+  before_action :set_band, only: %i[show edit update destroy]
 
   def index
-    @bands=Band.all
+    @bands = Band.all
   end
 
   def show; end
 
   def new
-    @band=Band.new
+    @band = Band.new
   end
 
   def create
     @band = Band.new(band_params)
-      if @band.save
-        redirect_to(:bands, notice: 'Success!')
-      else
-        flash[:alert] = 'Save error!'
-        render :new
-      end
+    if @band.save
+      redirect_to(:bands, notice: 'Success!')
+    else
+      flash[:alert] = 'Save error!'
+      render :new
+    end
   end
 
   def edit
@@ -28,12 +28,12 @@ class BandsController < ApplicationController
 
   def update
     @band = Band.find(params[:id])
-      if @band.update(band_params)
-        redirect_to(:bands, notice: 'Success!')
-      else
-         flash[:alert] = 'Save error!'
-        render :edit
-      end
+    if @band.update(band_params)
+      redirect_to(:bands, notice: 'Success!')
+    else
+      flash[:alert] = 'Save error!'
+      render :edit
+    end
   end
 
   def destroy
@@ -41,15 +41,13 @@ class BandsController < ApplicationController
     redirect_to(:bands, notice: 'Success!')
   end
 
-
   private
 
-    def set_band
-      @band = Band.find(params[:id])
-    end
+  def set_band
+    @band = Band.find(params[:id])
+  end
 
-    def band_params
-      params.require(:band).permit(:band_name, :band_members, :band_message)
-    end
-
+  def band_params
+    params.require(:band).permit(:band_name, :band_members, :band_message)
+  end
 end
