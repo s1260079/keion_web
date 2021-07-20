@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.order("student_id")
+    @users = User.order('student_id')
     # @users.division
   end
 
