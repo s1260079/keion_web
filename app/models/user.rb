@@ -8,4 +8,14 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   validates :user_name, :student_id, presence: true
+
+  # def division
+  #   for student in user do
+  #     if student.student_id.include?("s")
+  #         idS.push(student);
+  #     else
+  #         idM.push(student);
+  #     end
+  #   end
+  # end
 end
