@@ -1,15 +1,21 @@
 <%= form_with model: @band, local: true do |form| %>
         <div class="field">
           <%= form.label :band_name, "バンド名" %>
-          <%= form.text_field :band_name, class: "form-control" %>
+          <%= form.text_field :band_name, :placeholder => "会津っこ" ,class: "form-control" %>
         </div>
         <div class="field">
           <%= form.label :band_members, "バンドメンバー" %>
-          <%= form.text_area :band_members, :size=>"10x10" ,class: "form-control" %>
+          <%= form.text_area :band_members,
+          :placeholder => "Vo,Gt : 会津 太郎(26期)
+Gt : 会津 花子(短大１年)
+Ba : 福島 福子(院２年)
+Dr : 福島 福男(OB)
+          " ,
+          :size=>"10x10" ,class: "form-control" %>
         </div>
         <div class="field">
           <%= form.label :band_members, "一言" %>
-          <%= form.text_area :band_message, class: "form-control" %>
+          <%= form.text_area :band_message,:placeholder => "レッチリのコピーやります",  class: "form-control" %>
         </div>
         <div class="text-center">
             <%= form.submit "Save", class: "btn btn-primary" %>

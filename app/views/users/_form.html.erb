@@ -15,24 +15,24 @@
   <div class="form-group">
     <div class="field">
       <%= form.label :user_name, "名前（フルネーム）" %>
-      <%= form.text_field :user_name, class: "form-control" %>
+      <%= form.text_field :user_name, :placeholder => "会津 太郎" ,class: "form-control" %>
     </div>
     <div class="field">
       <%= form.label :student_id, "学籍番号（先頭にアルファベット含む）" %>
-      <%= form.text_field :student_id, class: "form-control" %>
+      <%= form.text_field :student_id, :placeholder => "s1100001" ,class: "form-control" %>
     </div>
     <% if @user == current_user %>
       <div class="field">
         <%= form.label :part, "パート" %>
-        <%= form.text_field :part, class: "form-control" %>
+        <%= form.text_field :part, :placeholder => "Vo,Gt" ,class: "form-control" %>
       </div>
       <div class="field">
         <%= form.label :like_band, "好きなバンドやジャンルなど" %>
-        <%= form.text_area :like_band, :size=>"10x5" ,class: "form-control" %>
+        <%= form.text_area :like_band, :size=>"10x5" ,:placeholder => "Red Hot Chili Peppers/Queen" ,class: "form-control" %>
       </div>
       <div class="field">
         <%= form.label :message, "一言" %>
-        <%= form.text_area :message, :size=>"10x3" ,class: "form-control" %>
+        <%= form.text_area :message, :size=>"10x3" ,:placeholder => "よろしくお願いします",class: "form-control" %>
       </div>
     <% elsif %>
       <div class="field">
