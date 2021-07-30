@@ -1,25 +1,27 @@
- @import 'bootstrap';
- body {
-     background-color: $light;
- }
- 
- h1 {
-     font-weight: 700;
-     margin-top: 80px;
-     font-size: 30px;
-     text-align: center;
- }
- 
- .allPage {
-     width: 800px;
-     margin: auto;
- }
- 
- .tableColor {
-     color: #444444;
- }
- 
- .link {
-     text-decoration: none;
-     color: #444444;
- }
+@import 'bootstrap';
+body {
+    background-color: $light;
+}
+
+h1 {
+    font-weight: 700;
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+    //  text-shadow: 0px 20px 6px #ccc, 0px -20px 6px #ccc;
+    text-shadow: 3px 3px 5px #aaa;
+}
+
+.allPage {
+    width: 800px;
+    margin: auto;
+}
+
+.tableColor {
+    color: #444444;
+}
+
+.link {
+    text-decoration: none;
+    color: #444444;
+}
