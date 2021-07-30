@@ -1,2 +1,35 @@
-<h1>Bands#show</h1>
-<p>Find me in app/views/bands/show.html.erb</p>
+<div class="allPage">
+  <p style="margin-top: 40px;"></p>
+  <div class="card" style="width: 500px; margin-left: 140px; box-shadow: 2px 2px 4px gray;margin-bottom: 40px;">
+    <h1 style="margin-top: 30px;">BAND INTORODUCTION SHEET</h1>
+    <div class="text-left" style="margin-bottom: 40px; margin-left: 40px;">
+
+      <p class="bandSpace">
+      <strong>BAND NAME</strong>
+      <div>　<%= @band.band_name %></div>
+      </p>
+
+      <p class="bandSpace">
+        <strong>MEMBERS</strong>
+        <div style="white-space: pre-wrap;margin-left: 20px;"><%= @band.band_members     %></div>
+      </p>
+
+      <p class="bandSpace">
+        <strong>A FEW WORDS</strong>
+        <div >　<%= @band.band_message %></div>
+      </p>
+
+      <div style="margin-left: 180px">
+      <%= image_tag 'IMG_6607', size: '50x50'%>
+      </div>
+
+    </div>
+  </div>
+  <div style="text-align: center;">
+    <% if @user == current_user %>
+    <%= link_to 'Edit', edit_band_path(@band) %> |
+    <%= link_to 'Destroy', @band, method: :delete, data: { confirm: 'Are you sure'  }    %>|
+    <% end %>
+    <%= link_to 'Back', bands_path %>
+  </div>
+</div>
