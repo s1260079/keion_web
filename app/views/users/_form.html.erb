@@ -1,4 +1,5 @@
-<%= form_with(model: user, local: true) do |form| %>
+<div class="allPage">
+  <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -12,34 +13,44 @@
   <% end %>
 
   <div class="form-group">
-
-    <div class="form-control">
-      <%= form.label :user_name %>
-      <%= form.text_field :user_name %>
+    <div class="field">
+      <%= form.label :user_name, "名前（フルネーム）" %>
+      <%= form.text_field :user_name, :placeholder => "会津 太郎" ,class: "form-control" %>
     </div>
-
-    <div class="form-control">
-      <%= form.label :student_id %>
-      <%= form.text_field :student_id %>
+    <div class="field">
+      <%= form.label :student_id, "学籍番号（先頭にアルファベット含む）" %>
+      <%= form.text_field :student_id, :placeholder => "s1300350" ,class: "form-control" %>
     </div>
-
-    <div class="form-control">
-      <%= form.label :email %>
-      <%= form.text_field :email %>
-    </div>
-
-    <div class="form-control">
-      <%= form.label :password %><br />
-      <%= form.password_field :password %>
-    </div>
-
-    <div class="form-control">
-      <%= form.label :password_confirmation %><br />
-      <%= form.password_field :password_confirmation %>
-    </div>
-
-    <div class="actions">
-      <%= form.submit %>
-    </div>
+    <% if @user == current_user %>
+      <div class="field">
+        <%= form.label :part, "パート" %>
+        <%= form.text_field :part, :placeholder => "Vo,Gt" ,class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :like_band, "好きなバンドやジャンルなど" %>
+        <%= form.text_area :like_band, :size=>"10x5" ,:placeholder => "Red Hot Chili Peppers/Queen" ,class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :message, "一言" %>
+        <%= form.text_area :message, :size=>"10x3" ,:placeholder => "よろしくお願いします",class: "form-control" %>
+      </div>
+    <% elsif %>
+      <div class="field">
+        <%= form.label :email, "メールアドレス" %>
+        <%= form.text_field :email,class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :password, "パスワード" %>
+        <%= form.password_field :password,class: "form-control" %>
+      </div>
+      <div class="field">
+        <%= form.label :password_confirmation, "パスワード（確認用）" %>
+        <%= form.password_field :password_confirmation,class: "form-control"%>
+      </div>
+    <% end %>
+      <div class="text-center">
+          <%= form.submit "Save", class: "btn btn-primary" %>
+      </div>
   </div>
+</div>
 <% end %>
