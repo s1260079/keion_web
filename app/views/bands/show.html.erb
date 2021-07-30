@@ -1,2 +1,27 @@
-<h1>Bands#show</h1>
-<p>Find me in app/views/bands/show.html.erb</p>
+<div class="allPage">
+  <h1 >Band Data</h1>
+  <div class="text-left" style="font-size: 23px; margin-top: 40px; margin-left: 200px; margin-bottom: 40px;">
+    <p>
+    <strong>バンド名　:　</strong>
+    <%= @band.band_name %>
+    </p>
+
+    <p>
+      <strong>バンドメンバー　:　</strong>
+      <div style="white-space: pre-wrap;"><%= @band.band_members %></div>
+    </p>
+
+    <p>
+      <strong>Message　:　</strong>
+      <%= @band.band_message %>
+    </p>
+  </div>
+
+  <div style="text-align: center;">
+    <% if @user == current_user %>
+    <%= link_to 'Edit', edit_band_path(@band) %> |
+    <%= link_to 'Destroy', @band, method: :delete, data: { confirm: 'Are you sure'   }  %>|
+    <% end %>
+    <%= link_to 'Back', bands_path %>
+  </div>
+</div>
