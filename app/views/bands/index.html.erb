@@ -2,7 +2,9 @@
   <h1 >Band Data</h1>
   <div style="text-align:center">
     <div class="text-center" style="margin-top: 40px; margin-bottom: 40px;">
-      <%= link_to 'バンドの登録はこちらから' , new_band_path %>
+      <% if current_user %>
+        <%= link_to 'バンドの登録はこちらから' , new_band_path %>
+      <% end %>
     </div>
   </div>
   <div style="text-align:center">
