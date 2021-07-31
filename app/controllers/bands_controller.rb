@@ -10,10 +10,12 @@ class BandsController < ApplicationController
 
   def new
     @band = Band.new
+    @band.user_id = current_user.id
   end
 
   def create
     @band = Band.new(band_params)
+    @band.user_id = current_user.id
     if @band.save
       redirect_to(:bands, notice: 'Success!')
     else
@@ -48,6 +50,6 @@ class BandsController < ApplicationController
   end
 
   def band_params
-    params.require(:band).permit(:band_name, :band_members, :band_message)
+    params.require(:band).permit(:band_name, :band_members, :band_message, :user_id)
   end
 end
