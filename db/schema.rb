@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_30_234645) do
+ActiveRecord::Schema.define(version: 2021_07_31_004128) do
 
   create_table "bands", force: :cascade do |t|
     t.string "band_name", null: false
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_07_30_234645) do
     t.text "band_message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
