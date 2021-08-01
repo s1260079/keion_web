@@ -19,6 +19,14 @@
         <div >　<%= @band.band_message %></div>
       </p>
 
+      <p>
+        <strong>Avatar path:</strong>
+        <%= @band.avatar_path %>
+      </p>
+      <p>
+        <%= image_tag @band.avatar_path.url  %>
+      </p>
+
       <div style="margin-left: 180px">
       <%= image_tag 'IMG_6607', size: '50x50'%>
       </div>

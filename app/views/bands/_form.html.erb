@@ -1,10 +1,10 @@
 <%= form_with model: @band, local: true do |form| %>
         <div class="field">
-          <%= form.label :band_name, "バンド名" %>
+          <%= form.label :band_name, "・バンド名" %>
           <%= form.text_field :band_name, :placeholder => "会津っこ" ,class: "form-control" %>
         </div>
         <div class="field">
-          <%= form.label :band_members, "バンドメンバー" %>
+          <%= form.label :band_members, "・バンドメンバー" %>
           <%= form.text_area :band_members,
           :placeholder => "Vo,Gt : 会津 太郎(26期)
 Gt : 会津 花子(短大１年)
@@ -14,8 +14,12 @@ Dr : 福島 福男(OB)
           :size=>"10x10" ,class: "form-control" %>
         </div>
         <div class="field">
-          <%= form.label :band_members, "一言" %>
+          <%= form.label :band_members, "・一言" %>
           <%= form.text_area :band_message,:placeholder => "レッチリのコピーやります",  class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :avatar_path ,'・バンドのアイコンとする画像を選択してください'%>
+          <p><%= form.file_field :avatar_path, id: 'band_avatar_path' %></p>
         </div>
         <div class="text-center">
             <%= form.submit "Save", class: "btn btn-primary" %>
