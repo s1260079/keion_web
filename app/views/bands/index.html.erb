@@ -7,16 +7,12 @@
       <% end %>
     </div>
   </div>
-  <div>
-    <div class="card-columns">
-        <% @bands.each do |band| %>
-          <div class="card" style=" box-shadow: 2px 2px 4px gray;margin-bottom: 40px;" >
-            <div class="card-body " style="height: 225px;" >
-              <h5 class="card-title" >＜<%= link_to band.band_name, band_path(band),class: 'link' %>＞</h5>
-              <p class="card-text" style="white-space: pre-wrap;"><%=band.band_members %></p>
-            </div>
-          </div>
-        <% end %>
-    </div>
+  <div style="text-align:center">
+      <% @bands.each do |band| %>
+        <div style="display:inline-block; margin-left: 20px; margin-top: 40px;">
+          <div style="box-shadow: 2px 2px 4px gray;"><%= link_to image_tag(band.avatar_path.url, size:'200x200'), band_path(band) %></div>
+          <div style="margin-top: 5px">・<%= link_to band.band_name, band_path(band),class: 'link' %></div>
+        </div>
+      <% end %>
   </div>
 </div>
