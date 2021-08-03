@@ -17,7 +17,34 @@ Dr : 福島 福男(OB)
           <%= form.label :band_members, "一言" %>
           <%= form.text_area :band_message,:placeholder => "レッチリのコピーやります",  class: "form-control" %>
         </div>
+        <div class="field">
+          <%= form.label :avatar_path ,'バンドのアイコンとする画像を選択してください'%>
+          <p><%= form.file_field :avatar_path, id: 'band_avatar_path' , class: 'form-control'%></p>
+        </div>
+        <div>
+          <% if @band.avatar_path.present? %>
+            <%= image_tag @band.avatar_path, id: :img_prev,size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
+          <% else %>
+            <%= image_tag "no_image.png", id: :img_prev ,size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
+          <% end %>
+        </div>
+        <script type="text/javascript">
+          $(function() {
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+            $('#img_prev').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $("#band_avatar_path").change(function(){
+                readURL(this);
+            });
+          });
+        </script>
         <div class="text-center">
-            <%= form.submit "Save", class: "btn btn-primary" %>
+          <%= form.submit "Save", class: "btn btn-primary" %>
         </div>
 <% end %>

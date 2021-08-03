@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_31_004128) do
+ActiveRecord::Schema.define(version: 2021_07_31_233016) do
 
   create_table "bands", force: :cascade do |t|
     t.string "band_name", null: false
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2021_07_31_004128) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.string "image_id"
+    t.string "avatar_path"
   end
 
   create_table "users", force: :cascade do |t|
@@ -32,6 +34,7 @@ ActiveRecord::Schema.define(version: 2021_07_31_004128) do
     t.string "part"
     t.text "like_band"
     t.text "message"
+    t.string "avatar_path"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
