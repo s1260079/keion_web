@@ -251,6 +251,7 @@ GEM
     regexp_parser (2.1.1)
     remotipart (1.4.4)
     rexml (3.2.5)
+    rinku (2.0.6)
     rspec-core (3.9.3)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.4)
@@ -382,6 +383,7 @@ DEPENDENCIES
   rails_admin
   rails_admin-i18n
   ransack
+  rinku
   rspec-rails (~> 3.7)
   rubocop
   rubocop-checkstyle_formatter
