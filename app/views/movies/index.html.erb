@@ -1,2 +1,16 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<div class="allPage">
+  <h1 > Movies</h1>
+  <div style="text-align:center">
+  </div>
+  <div style="text-align:center">
+      <% @movies.each do |movie| %>
+        <div><%= @movie.title %></div>
+        <div><%= @movie.content %></div>
+      <% end %>
+  </div>
+  <div class="text-center" style="margin-top: 40px; margin-bottom: 40px;">
+      <% if current_user %>
+        <%= link_to '動画の追加はこちらから' , new_mpvie_path %>
+      <% end %>
+  </div>
+</div>
