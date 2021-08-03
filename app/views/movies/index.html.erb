@@ -1,9 +1,9 @@
 <div class="allPage">
-  <h1 > Movies</h1>
+  <h1 style="margin-bottom: 30px;"> Movies</h1>
   <div style="text-align:left">
       <% @movies.each do |movie| %>
-        <div>・<%= link_to movie.title, movie_path(movie),class: 'link' %></div>
-        <div><%= Rinku.auto_link(movie.content, :all, 'target="_blank"').html_safe %></div>
+        <div style="margin-top: 20px;">・<%= link_to movie.title, movie_path(movie),class: 'link' %></div>
+        <div style="style=margin-top: 20px;"><%= Rinku.auto_link(movie.content, :all, 'target="_blank"').html_safe %></div>
       <% end %>
   </div>
   <div class="text-center" style="margin-top: 40px; margin-bottom: 40px;">
