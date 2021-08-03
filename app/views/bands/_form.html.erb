@@ -23,7 +23,7 @@ Dr : 福島 福男(OB)
         </div>
         <div>
           <% if @band.avatar_path.present? %>
-            <%= image_tag @band.avatar_path, id: :img_prev,size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
+            <%= image_tag @band.avatar_path, id: 'band_avatar_path',size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
           <% else %>
             <%= image_tag "no_image.png", id: :img_prev ,size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
           <% end %>
