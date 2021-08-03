@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :bands
   resources :movies
+  resources :equipments
 
   get 'login', to: 'user_sessions#new', as: 'login'
   post 'login', to: 'user_sessions#create'
