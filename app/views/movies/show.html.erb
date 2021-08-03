@@ -1,2 +1,30 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<div class="allPage">
+  <p style="margin-top: 40px;"></p>
+  <div class="card" style="width: 500px; margin-left: 50px; box-shadow: 2px 2px 4px gray;margin-bottom: 40px;">
+    <h1 style="margin-top: 30px;">LIVE MOVIE</h1>
+    <div class="text-left" style="margin-bottom: 40px; margin-left: 40px;">
+
+      <p class="bandSpace">
+      <strong>TITLE</strong>
+      <div>　<%= @movie.title %></div>
+      </p>
+
+      <p class="bandSpace">
+        <strong>URL</strong>
+        <div><%= Rinku.auto_link(@movie.content, :all, 'target="_blank"').html_safe %></div>
+      </p>
+
+      <div style="margin-left: 180px">
+      <%= image_tag 'IMG_6607', size: '50x50'%>
+      </div>
+
+    </div>
+  </div>
+  <div style="text-align: center;">
+    <% if current_user && current_user.id == @movie.user_id %>
+      <%= link_to 'Edit', edit_movie_path(@movie) %> |
+      <%= link_to 'Destroy', @movie, method: :delete, data: { confirm: 'Are you sure'  }    %>|
+    <% end %>
+      <%= link_to 'Back', movies_path %>
+  </div>
+</div>
