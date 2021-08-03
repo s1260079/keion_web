@@ -19,30 +19,29 @@ Dr : 福島 福男(OB)
         </div>
         <div class="field">
           <%= form.label :avatar_path ,'バンドのアイコンとする画像を選択してください'%>
-          <p><%= form.file_field :avatar_path, id: 'band_avatar_path' , class: 'form-control'%></p>
+          <%= form.file_field :avatar_path ,onchange: 'previewImage(preview)', class: 'form-control' %>
         </div>
         <div>
           <% if @band.avatar_path.present? %>
-            <%= image_tag @band.avatar_path, id: 'band_avatar_path',size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
+            <%= image_tag @band.avatar_path.url, id: 'preview',size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
           <% else %>
-            <%= image_tag "no_image.png", id: :img_prev ,size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
+            <%= image_tag "no_image.png", id: 'preview' ,size:'200x200',style:"box-shadow: 2px 2px 4px gray;" %>
           <% end %>
         </div>
         <script type="text/javascript">
-          $(function() {
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-            $('#img_prev').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-                }
-            }
-            $("#band_avatar_path").change(function(){
-                readURL(this);
-            });
-          });
+          function previewImage(id) {
+              const target = this.event.target;
+              const file = target.files[0];
+              const reader = new FileReader();
+              reader.onloadend = function() {
+                  preview.src = reader.result;
+              };
+              if (file) {
+                  reader.readAsDataURL(file);
+              } else {
+                  preview.src = "";
+              }
+          }
         </script>
         <div class="text-center">
           <%= form.submit "Save", class: "btn btn-primary" %>

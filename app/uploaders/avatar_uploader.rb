@@ -2,7 +2,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-
+  def default_url
+    'no_image.png'
+  end
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
