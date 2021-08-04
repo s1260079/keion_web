@@ -1,0 +1,14 @@
+<div class="allPage">
+  <h1 style="margin-bottom: 30px;"> Movies</h1>
+  <div style="text-align:left">
+      <% @movies.each do |movie| %>
+        <div style="margin-top: 20px;">・<%= link_to movie.title, movie_path(movie),class: 'link' %></div>
+        <div style="style=margin-top: 20px;"><%= Rinku.auto_link(movie.content, :all, 'target="_blank"').html_safe %></div>
+      <% end %>
+  </div>
+  <div class="text-center" style="margin-top: 80px; margin-bottom: 80px;">
+      <% if current_user %>
+        <%= link_to '動画の追加はこちらから' , new_movie_path ,class: 'link'%>
+      <% end %>
+  </div>
+</div>

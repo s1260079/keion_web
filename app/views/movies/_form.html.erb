@@ -1,0 +1,14 @@
+<%= form_with model: @movie, local: true do |form| %>
+        <div class="field">
+          <%= form.label :title, "動画のタイトル" %>
+          <%= form.text_field :title, :placeholder => "2019/新歓ライブ" ,class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :content, "動画のリンク" %>
+          <%= form.text_area :content,
+          :placeholder => "https://www.youtube.com/playlist?list=PLZ2IIl-_gqx7qZHWHC8T5Dr_vTPOAg65t",class: "form-control" %>
+        </div>
+        <div class="text-center">
+          <%= form.submit "Save", class: "btn btn-primary" %>
+        </div>
+<% end %>
