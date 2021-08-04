@@ -30,8 +30,8 @@
                     <p>This is CUO, a music circle at the University of Aizu. <br>
     The official name of the group is Comfort Utopian Orchestra. Let's play music together!</p>
                     <p>
-                        <a class="btn btn-primary btn-lg" role="button">Login</a> 
-                        <a target="_blank" href="#" class="btn btn-lg btn-danger" role="button">Singup</a>
+                        <%= link_to 'Login', login_path, class: 'btn btn-lg btn-primary', role: 'button' %>
+                        <%= link_to 'Signup', new_user_path, class: 'btn btn-lg btn-danger', role: 'button' %>
                     </p>
                 </div>
             </div>
