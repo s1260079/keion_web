@@ -8,17 +8,22 @@
                     </div>
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <%= link_to 'Home', root_path, class: "nav-link active", id: "pills-home-tab", role: "tab", 'aria-controls': 'pills-home', 'aria-selected': :true %>
+                            <%= link_to 'Home', root_path, class: "nav-link active", id: "pills-home-tab",role: "tab", 'aria-controls': 'pills-home', 'aria-selected': :true %>
                         </li>
                         <li class="nav-item" role="presentation">
                             <%= link_to 'Member', users_path, class: "nav-link", id: "pills-profile-tab", role: "tab", 'aria-controls': 'pills-profile', 'aria-selected': :false %>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <%= link_to 'Band', bands_path, class: "nav-link", id: "pills-contect-tab", role: "tab", 'aria-controls': 'pills-profile', 'aria-selected': :false %>
+                            <%= link_to 'Band', bands_path, class: "nav-link", id: "pills-contect-tab", role: "tab", 'aria-controls': 'pills-contact', 'aria-selected': :false %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "MOVIE", movies_path, class: 'nav-link' %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "EQUIPMENT", equipments_path, class: 'nav-link' %>
                         </li>
                     </ul>
                 </div>
-                
                 <div class="jumbotron">
                     <h1><strong>C U O</strong></br>
                     <small>Comfort Utopian Orchestra</small></h1>
@@ -26,7 +31,8 @@
     The official name of the group is Comfort Utopian Orchestra. Let's play music together!</p>
                     <p>
                         <a class="btn btn-primary btn-lg" role="button">Login</a> 
-                        <a target="_blank" href="#" class="btn btn-lg btn-danger" role="button">Singup</a></p>
+                        <a target="_blank" href="#" class="btn btn-lg btn-danger" role="button">Singup</a>
+                    </p>
                 </div>
             </div>
         </div>
