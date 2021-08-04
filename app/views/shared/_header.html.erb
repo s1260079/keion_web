@@ -1,51 +1,40 @@
-<div class="container">
-  <div class="row">
-    <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <nav class="navbar navbar-light bg-white">
+<div class="site-overlay">
+    <header id="home">
         <div class="container-fluid">
-          <%= link_to image_tag('IMG_6607.jpg', size:'40x40'), root_path %>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-10">
+                        <%= link_to image_tag('logo_transparent.png', class: 'img-responsive'), root_path %>
+                    </div>
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <%= link_to 'Home', root_path, class: "nav-link active", id: "pills-home-tab",role: "tab", 'aria-controls': 'pills-home', 'aria-selected': :true %>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <%= link_to 'Member', users_path, class: "nav-link", id: "pills-profile-tab", role: "tab", 'aria-controls': 'pills-profile', 'aria-selected': :false %>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <%= link_to 'Band', bands_path, class: "nav-link", id: "pills-contect-tab", role: "tab", 'aria-controls': 'pills-contact', 'aria-selected': :false %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "MOVIE", movies_path, class: 'nav-link' %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "EQUIPMENT", equipments_path, class: 'nav-link' %>
+                        </li>
+                    </ul>
+                </div>
+                <div class="jumbotron">
+                    <h1><strong>C U O</strong></br>
+                    <small>Comfort Utopian Orchestra</small></h1>
+                    <p>This is CUO, a music circle at the University of Aizu. <br>
+    The official name of the group is Comfort Utopian Orchestra. Let's play music together!</p>
+                    <p>
+                        <a class="btn btn-primary btn-lg" role="button">Login</a> 
+                        <a target="_blank" href="#" class="btn btn-lg btn-danger" role="button">Singup</a>
+                    </p>
+                </div>
+            </div>
         </div>
-      </nav>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <%= link_to "HOME", root_path, class: 'nav-link' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "MEMBER", users_path, class: 'nav-link' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "BAND", bands_path, class: 'nav-link' %>
-              </li>
-            </ul>
-          </div>
-          <ul class="navbar-nav d-flex">
-          <% if current_user %>
-            <li class='nav-item dropdown dropdown-slide'>
-              <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="header-profile">
-                <%= image_tag 'sample.png', size: '40x40', class: 'rounded-circle mr15'%>
-              </a>
-              <div class='dropdown-menu dropdown-menu-right'>
-                <div class='dropdown-item'>名前</div>
-                <div class='dropdown-divider'></div>
-                <%= link_to "Profile", user_path(current_user.id), class: 'dropdown-item' %>
-                <%= link_to "Logout", :logout, method: :post, class: 'dropdown-item' %>
-              </div>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "Register", new_user_path, class: 'nav-link'%>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Login", :login, class: 'nav-link'%>
-            </li>
-          <% end %>
-          </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
+    </header>
 </div>
