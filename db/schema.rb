@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2021_08_03_101111) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.string "image_id"
     t.string "avatar_path"
   end
 
