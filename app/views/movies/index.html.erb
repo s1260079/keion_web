@@ -1,5 +1,7 @@
+<div class="title">
+    <h2 >Movies</h2>
+</div>
 <div class="allPage">
-  <h1 style="margin-bottom: 30px;"> Movies</h1>
   <div style="text-align:left">
       <% @movies.each do |movie| %>
         <div style="margin-top: 20px;">・<%= link_to movie.title, movie_path(movie),class: 'link' %></div>

@@ -5,13 +5,21 @@
 //     // background-image: url("image.jpg");
 //     /* 両端部分に付ける背景画像 */
 // }
-h1, h2, h3, h4, h5, h6
-{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Roboto Slab', serif;
 }
 
-h1, h2, h3, h4, h5, h6
-{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 1.1em;
 }
 
@@ -19,49 +27,48 @@ h1, h2, h3, h4, h5, h6
 .blog,
 .gallery,
 .clients,
-.prefooter .container-fluid
-{
+.prefooter .container-fluid {
     padding-top: 3.3em;
     padding-bottom: 4.2em;
 }
 
-span.typcn::before, i.typcn::before
-{
+span.typcn::before,
+i.typcn::before {
     font-size: 2em;
 }
 
-span.x2:before, i.x2:before
-{
+span.x2:before,
+i.x2:before {
     font-size: 3.4em;
 }
 
-span.x3:before, i.x3:before
-{
+span.x3:before,
+i.x3:before {
     font-size: 4.4em;
 }
 
-span.x4:before, i.x4:before
-{
+span.x4:before,
+i.x4:before {
     font-size: 6em;
 }
 
-header .container-fluid
-{
-    background-image: url('band11.JPG');
+header .container-fluid {
+    background-image: url('IMG_5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    padding-top: 36px;
 }
 
-.nav
-{
-    padding-top: 5em;
-    padding-left: 25em;
+.home {
+    background-color: rgba(36, 50, 59, 1);
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link 
-{
+.nav {
+    padding-top: 0em;
+    padding-left: 5em;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     color: #512D6D;
     background-color: #EEEEEE;
     border-radius: 100px;
@@ -69,34 +76,28 @@ header .container-fluid
     font-weight: 100;
 }
 
-.nav-link
-{
+.nav-link {
     color: #EEEEEE;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
 }
 
-.hamburger
-{
+.hamburger {
     font-size: 2.3em;
     color: #000;
 }
 
-.hamburger:hover
-{
-  color: #FFF;
-  cursor: pointer;
+.hamburger:hover {
+    color: #FFF;
+    cursor: pointer;
 }
 
-
-.logo
-{
+.logo {
     background: none;
     border: 0px;
 }
 
-.jumbotron
-{
+.jumbotron {
     background: none;
     text-align: center;
 }
@@ -107,13 +108,11 @@ header .container-fluid
 .jumbotron h4,
 .jumbotron h5,
 .jumbotron h6,
-.jumbotron small
-{
+.jumbotron small {
     color: #FFFFFF;
 }
 
-.jumbotron p
-{
+.jumbotron p {
     color: #FFFFFF;
     margin-bottom: 5%;
 }
@@ -132,20 +131,23 @@ h1 {
 
 img {
     vertical-align: middle;
-  }
-  .img-responsive,
-  .thumbnail > img,
-  .thumbnail a > img,
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
+}
+
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
     display: block;
     max-width: 100%;
     height: auto;
-  }
-  .img-rounded {
+}
+
+.img-rounded {
     border-radius: 6px;
-  }
-  .img-thumbnail {
+}
+
+.img-thumbnail {
     display: inline-block;
     max-width: 100%;
     height: auto;
@@ -155,25 +157,27 @@ img {
     border: 1px solid #ddd;
     border-radius: 4px;
     -webkit-transition: all .2s ease-in-out;
-         -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-  }
-  .img-circle {
-    border-radius: 50%;
-  }
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
 
-  .btn-primary {
-    background: #00C1D4; 
+.img-circle {
+    border-radius: 50%;
+}
+
+.btn-primary {
+    background: #00C1D4;
     color: #fff;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
-  }
-  .btn-danger {
-    background: #F8485E; 
+}
+
+.btn-danger {
+    background: #F8485E;
     color: #fff;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
-  }
+}
 
 // h1:before,
 // h1:after {
@@ -187,37 +191,25 @@ img {
 //     border-top: solid 1px black;
 //     border-bottom: solid 1px black;
 // }
-
 // h1:before {
 //     left: 0;
 // }
-
 // h1:after {
 //     right: 0;
 // }
-
-h2 {
-    font-weight: 700;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 30px;
-    text-align: center;
-}
 
 /*------------------------------------*\
 	SECTIONS
 \*------------------------------------*/
 
-.number .container-fluid
-{
+.number .container-fluid {
     background-image: url('https://unsplash.it/3000/2000?image=685');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.opaline
-{
+.opaline {
     padding-top: 3em;
     padding-bottom: 3em;
     background-color: rgba(128, 215, 247, 0.660);
@@ -229,45 +221,34 @@ h2 {
 .opaline h4,
 .opaline h5,
 .opaline h6,
-.opaline p
-{
+.opaline p {
     color: #FFFFFF;
 }
 
-.opaline .boxes
-{
+.opaline .boxes {
     margin-top: 30px;
     padding-top: 20px;
     padding-bottom: 5px;
     border: 1px solid #FFF;
 }
 
-.boxes .odometer.odometer-theme-default
-{
-  font-family: 'Roboto Slab', serif;
+.boxes .odometer.odometer-theme-default {
+    font-family: 'Roboto Slab', serif;
 }
 
-.story .container-fluid
-{
+.story .container-fluid {
     background-image: url('https://unsplash.it/3000/2000?image=531');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.gallery
-{
+.gallery {
     background-color: #dddddd;
 }
 
-.prefooter .container-fluid
-{
-    background: linear-gradient(
-      rgba(33, 37, 43, 0.6),
-      rgba(33, 37, 43, 0.6)
-    ),
-
-    url(https://unsplash.it/4000/3000?image=528);
+.prefooter .container-fluid {
+    background: linear-gradient( rgba(33, 37, 43, 0.6), rgba(33, 37, 43, 0.6)), url(https://unsplash.it/4000/3000?image=528);
 }
 
 .prefooter h1,
@@ -276,8 +257,7 @@ h2 {
 .prefooter h4,
 .prefooter h5,
 .prefooter h6,
-.prefooter p
-{
+.prefooter p {
     color: #FFFFFF;
 }
 
@@ -286,8 +266,7 @@ h2 {
 	FOOTER
 \*------------------------------------*/
 
-footer
-{
+footer {
     background-color: rgba(36, 50, 59, 1);
     padding-top: 2em;
     padding-bottom: 1.2em;
@@ -299,22 +278,15 @@ footer h3,
 footer h4,
 footer h5,
 footer h6,
-footer p
-{
+footer p {
     color: #FFFFFF;
 }
 
-.social
-{
+.social {
     padding-top: 50px;
 }
 
-
-
-
-
 //  元のコード
-
 // body {
 //     margin: 0px 15%;
 //     /* 外側の余白を、上下はゼロで左右は画面横幅の15％に */
@@ -323,15 +295,25 @@ footer p
 //     background-color: white;
 //     /* 本文部分の背景色は白色 */
 // }
-
 // .allPage {
 //     width: 600px;
 //     margin: auto;
 // }
-
 // .tableColor {
 //     color: #444444;
 // }
+.title {
+    background-image: url('title.png');
+    background-size: cover;
+    height: 10rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 4em;
+    text-align: center;
+    padding: 2rem 0;
+}
 
 .link {
     text-decoration: none;
