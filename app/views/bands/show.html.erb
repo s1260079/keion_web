@@ -1,10 +1,15 @@
 <div class="title">
     <h2 >Band</h2>
 </div>
-<div class="allPage">
+<div class="container">
   <p style="margin-top: 40px;"></p>
   <div class="card" style="width: 500px; margin:  0 auto; box-shadow: 2px 2px 4px gray;margin-bottom: 40px;">
     <h3 style="text-align: center;">BAND INTORODUCTION SHEET</h3>
+
+    <p style="text-align: center;">
+        <%= image_tag(@band.avatar_path.url, size:'180x180') %>
+    </p>
+
     <div class="text-left" style="margin-bottom: 40px; margin-left: 40px;">
 
       <p class="bandSpace">
