@@ -1,13 +1,11 @@
 <div class="title">
     <h2 >Band Data</h2>
 </div>
-<div class="allPage">
-  <div style="text-align:center">
-  </div>
-  <div style="text-align:center">
+<div class="container">
+  <div class="row">
       <% @bands.each do |band| %>
-        <div style="display:inline-block; margin-left: 7px; margin-top: 40px;">
-          <div style="box-shadow: 2px 2px 4px gray;"><%= link_to image_tag(band.avatar_path.url, size:'190x190'), band_path(band) %></div>
+        <div class="col-12 col-md-6 col-lg-3" style="margin-top: 40px;">
+          <div><%= link_to image_tag(band.avatar_path.url, size:'220x220'), band_path(band),class: "btn btn-light" %></div>
           <div style="margin-top: 5px">・<%= link_to band.band_name, band_path(band),class: 'link' %></div>
         </div>
       <% end %>
