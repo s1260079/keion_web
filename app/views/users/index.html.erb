@@ -16,7 +16,7 @@
       <tbody>
           <tr class="table-secondary"><th colspan="3">・院生</th></tr>
           <% @users.each do |user| %>
-            <% if user.student_id.include?("m") %>
+            <% if user.hantei==0 %>
               <tr>
                 <th><%= link_to user.student_id, user_path(user), class: 'link'%></th>
                 <th><%= link_to user.user_name , user_path(user), class: 'link'%></th>
@@ -26,7 +26,7 @@
           <% end %>
           <tr class="table-secondary"><th colspan="3">・学部生</th></tr>
           <% @users.each do |user| %>
-            <% if user.student_id.include?("s") %>
+            <% if user.hantei==1 %>
               <tr>
                 <th><%= link_to user.student_id, user_path(user), class: 'link'%></th>
                 <th><%= link_to user.user_name , user_path(user), class: 'link'%></th>
@@ -36,19 +36,7 @@
           <% end %>
           <tr class="table-secondary"><th colspan="3">・短大生</th></tr>
           <% @users.each do |user| %>
-            <% if user.student_id.include?("a") %>
-              <tr>
-                <th><%= link_to user.student_id, user_path(user), class: 'link'%></th>
-                <th><%= link_to user.user_name , user_path(user), class: 'link'%></th>
-                <th><%= user.part %></th>
-              </tr>
-            <% elsif user.student_id.include?("b") %>
-              <tr>
-                <th><%= link_to user.student_id, user_path(user), class: 'link'%></th>
-                <th><%= link_to user.user_name , user_path(user), class: 'link'%></th>
-                <th><%= user.part %></th>
-              </tr>
-            <% elsif user.student_id.include?("k") %>
+            <% if user.hantei==2 %>
               <tr>
                 <th><%= link_to user.student_id, user_path(user), class: 'link'%></th>
                 <th><%= link_to user.user_name , user_path(user), class: 'link'%></th>
@@ -58,12 +46,7 @@
           <% end %>
           <tr class="table-secondary"><th colspan="3">・その他</th></tr>
           <% @users.each do |user| %>
-            <% if user.student_id.include?("m")%>
-            <% elsif user.student_id.include?("s")%>
-            <% elsif user.student_id.include?("a")%>
-            <% elsif user.student_id.include?("b")%>
-            <% elsif user.student_id.include?("k")%>
-            <% else %>
+            <% if user.hantei==3%>
               <tr>
                 <th><%= link_to user.student_id, user_path(user), class: 'link'%></th>
                 <th><%= link_to user.user_name , user_path(user), class: 'link'%></th>
