@@ -17,13 +17,13 @@ class User < ActiveRecord::Base
 
   def student_judgment
       if student_id.include?("m")
-          hantei = 0
+        judgment = 0
       elsif student_id.include?("s")
-          hantei = 1
-      elsif student_id.include?("a" || "b" || "k")
-          hantei = 2
+        judgment = 1
+      elsif ["a","b","k"].any?{|i| student_id.include?(i)}
+        judgment = 2
       else
-          hantei = 3
+        judgment = 3
       end
   end
 end
