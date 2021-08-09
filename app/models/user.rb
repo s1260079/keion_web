@@ -15,13 +15,19 @@ class User < ActiveRecord::Base
 
 
 
-  # def division
-  #   for student in user do
-  #     if student.student_id.include?("s")
-  #         idS.push(student);
-  #     else
-  #         idM.push(student);
-  #     end
-  #   end
-  # end
+  def hantei
+      if self.student_id.include?("m")
+          return self.hantei = 0
+      elsif self.student_id.include?("s")
+          return self.hantei = 1
+      elsif self.student_id.include?("a")
+          return self.hantei = 2
+      elsif self.student_id.include?("b")
+          return self.hantei = 2
+      elsif self.student_id.include?("k")
+          return self.hantei = 2
+      else
+          return self.hantei = 3
+      end
+  end
 end
