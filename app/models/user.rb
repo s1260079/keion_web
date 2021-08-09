@@ -20,11 +20,7 @@ class User < ActiveRecord::Base
         judgment = 0
       elsif student_id.include?("s")
         judgment = 1
-      elsif student_id.include?("a")
-        judgment = 2
-      elsif student_id.include?("b")
-        judgment = 2
-      elsif student_id.include?("k")
+      elsif ["a","b","k"].any?{|i| student_id.include?(i)}
         judgment = 2
       else
         judgment = 3
