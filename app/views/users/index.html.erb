@@ -16,25 +16,25 @@
       <tbody>
           <tr class="table-secondary"><th colspan="3">・院生</th></tr>
           <% @users.each do |user| %>
-            <% if user.hantei==0 %>
+            <% if user.student_judgment == 0 %>
               <%= render 'table', user: user %>
             <% end %>
           <% end %>
           <tr class="table-secondary"><th colspan="3">・学部生</th></tr>
           <% @users.each do |user| %>
-            <% if user.hantei==1 %>
+            <% if user.student_judgment == 1 %>
               <%= render 'table', user: user %>
             <% end %>
           <% end %>
           <tr class="table-secondary"><th colspan="3">・短大生</th></tr>
           <% @users.each do |user| %>
-            <% if user.hantei==2 %>
+            <% if user.student_judgment == 2 %>
               <%= render 'table', user: user %>
             <% end %>
           <% end %>
           <tr class="table-secondary"><th colspan="3">・その他</th></tr>
           <% @users.each do |user| %>
-            <% if user.hantei==3%>
+            <% if user.student_judgment == 3%>
               <%= render 'table', user: user %>
             <% end %>
           <% end %>

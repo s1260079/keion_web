@@ -15,19 +15,15 @@ class User < ActiveRecord::Base
 
 
 
-  def hantei
-      if self.student_id.include?("m")
-          return self.hantei = 0
-      elsif self.student_id.include?("s")
-          return self.hantei = 1
-      elsif self.student_id.include?("a")
-          return self.hantei = 2
-      elsif self.student_id.include?("b")
-          return self.hantei = 2
-      elsif self.student_id.include?("k")
-          return self.hantei = 2
+  def student_judgment
+      if student_id.include?("m")
+          hantei = 0
+      elsif student_id.include?("s")
+          hantei = 1
+      elsif student_id.include?("a" || "b" || "k")
+          hantei = 2
       else
-          return self.hantei = 3
+          hantei = 3
       end
   end
 end
