@@ -4,9 +4,9 @@
 <div class="container">
   <div class="row">
       <% @bands.each do |band| %>
-        <div class="col-12 col-md-6 col-lg-3" style="margin-top: 40px;">
-          <div><%= link_to image_tag(band.avatar_path.url, size:'220x220'), band_path(band),class: "btn btn-light" %></div>
-          <div style="margin-top: 5px">・<%= link_to band.band_name, band_path(band),class: 'link' %></div>
+        <div class="col-12 col-md-6 col-lg-4" style="margin-top: 40px;">
+          <div><%= link_to image_tag(band.avatar_path.url, size:'270x270'), band_path(band),class: "btn btn-light" %></div>
+          <div style="font-size:25px;margin-top: 5px">・<%= link_to band.band_name, band_path(band),class: 'link' %></div>
         </div>
       <% end %>
   </div>

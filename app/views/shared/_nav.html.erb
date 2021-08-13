@@ -1,0 +1,23 @@
+<nav id="nav">
+  <ul>
+    <li><%= link_to 'HOME', root_path, class: 'dropdown-item' %></li>
+    <li><%= link_to 'MEMBER', users_path, class: 'dropdown-item' %></li>
+    <li><%= link_to 'BAND', bands_path, class: 'dropdown-item' %></li>
+    <li><%= link_to "MOVIE", movies_path, class: 'dropdown-item' %></li>
+    <li><%= link_to "EQUIPMENT", equipments_path, class: 'dropdown-item'  %></li>
+    <% if current_user %>
+    <li><%= link_to "PROFILE", user_path(current_user.id), class: 'dropdown-item' %></li>
+    <li><%= link_to "LOGOUT", :logout, method: :post, class: 'dropdown-item' %></li>
+    <% else %>
+    <li><%= link_to "REGISTER", new_user_path, class: 'dropdown-item'%></li>
+    <li><%= link_to "LOGIN", :login, class: 'dropdown-item'%></li>
+    <% end %>
+  </ul>
+</nav>
+<div id="hamburger">
+  <span class="inner_line" id="line1"></span>
+  <span class="inner_line" id="line2"></span>
+  <span class="inner_line" id="line3"></span>
+</div>
+
+<%= javascript_include_tag 'header' %>
