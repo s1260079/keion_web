@@ -1,0 +1,118 @@
+<nav id="nav">
+  <ul>
+    <li><%= link_to 'HOME', root_path, class: 'dropdown-item' %></li>
+    <li><%= link_to 'MEMBER', users_path, class: 'dropdown-item' %></li>
+    <li><%= link_to 'BAND', bands_path, class: 'dropdown-item' %></li>
+    <li><%= link_to "MOVIE", movies_path, class: 'dropdown-item' %></li>
+    <li><%= link_to "EQUIPMENT", equipments_path, class: 'dropdown-item'  %></li>
+    <% if current_user %>
+    <li><%= link_to "PROFILE", user_path(current_user.id), class: 'dropdown-item' %></li>
+    <li><%= link_to "LOGOUT", :logout, method: :post, class: 'dropdown-item' %></li>
+    <% else %>
+    <li><%= link_to "REGISTER", new_user_path, class: 'dropdown-item'%></li>
+    <li><%= link_to "LOGIN", :login, class: 'dropdown-item'%></li>
+    <% end %>
+  </ul>
+</nav>
+<div id="hamburger">
+  <span class="inner_line" id="line1"></span>
+  <span class="inner_line" id="line2"></span>
+  <span class="inner_line" id="line3"></span>
+</div>
+
+<style>
+#nav{
+  position: absolute;
+  height: 50rem;
+  width: 100%;
+  right: 0; /* 変更 */
+  top: -50rem; /* 変更 */
+  background-color: rgba(36, 50, 59, 1);
+  transition: .7s;
+}
+#nav ul{
+  padding-top: 180px;
+}
+#nav ul li{
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+  font-size: 30px;
+  color: #000000;
+}
+.dropdown-item{
+  color: white;
+}
+#hamburger {
+  position: absolute;
+  top: 10px;
+  right: 30px; /* 変更 */
+  width: 50px;
+  height: 30px;
+  transition: 1.3s;
+}
+.inner_line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 45px;
+  height: 3px;
+  background-color: #000000;
+  transition: 1.3s;
+  border-radius: 4px;
+}
+#line1 {
+  top: 0;
+}
+#line2 {
+  top: 14px;
+}
+#line3 {
+  bottom: 0px;
+}
+
+.in{
+  transform: translateY(100%); /* 変更 */
+}
+.line_1,.line_2,.line_3{
+  background: #000000;
+}
+.line_1 {
+  transform: translateY(14px) rotate(-37deg);
+  top: 0;
+}
+.line_2 {
+  opacity: 0;
+}
+.line_3 {
+  transform: translateY(-14px) rotate(37deg);
+  bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  #nav{
+  position: absolute;
+  height: 40rem;
+  width: 100%;
+  right: 0; /* 変更 */
+  top: -40rem; /* 変更 */
+  background-color: rgba(36, 50, 59, 1);
+  transition: .7s;
+}
+  #hamburger {
+    display: block;
+  }
+}
+</style>
+
+<script>
+  function hamburger(){
+    document.getElementById('line1').classList.toggle('line_1');
+    document.getElementById('line2').classList.toggle('line_2');
+    document.getElementById('line3').classList.toggle('line_3');
+    document.getElementById('nav').classList.toggle('in');
+  };
+  document.getElementById('hamburger').addEventListener('click',function(){
+    hamburger();
+  });
+</script>
