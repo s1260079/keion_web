@@ -3,7 +3,7 @@
 /*------------------------------------*\
 	HEADER
 \*------------------------------------*/
-
+p,
 h1,
 h2,
 h3,
@@ -13,6 +13,7 @@ h6 {
     font-family: 'Roboto Slab', serif;
 }
 
+p,
 h1,
 h2,
 h3,
@@ -183,11 +184,11 @@ img {
 
 #nav {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     right: 0;
     /* 変更 */
-    top: -100%;
+    top: -100vh;
     /* 変更 */
     background-color: rgba(36, 50, 59, 1);
     transition: .7s;
@@ -273,40 +274,12 @@ img {
     bottom: 0;
 }
 
-@media (max-width: 900px) {
-    #nav {
-        position: absolute;
-        height: 400px;
-        width: 100%;
-        right: 0;
-        /* 変更 */
-        top: -400px;
-        /* 変更 */
-        background-color: rgba(36, 50, 59, 1);
-        transition: .7s;
-    }
-    // #nav ul {
-    //     padding-top: 80px;
-    // }
-    // #nav ul li {
-    //     list-style-type: none;
-    //     text-align: center;
-    //     position: relative;
-    //     font-size: 25px;
-    //     color: #000000;
-    // }
-    // #hamburger {
-    //     display: block;
-    // }
-}
-
-
 /*------------------------------------*\
 	SECTIONS
 \*------------------------------------*/
 
 .number .container-fluid {
-    background-image: url('https://unsplash.it/3000/2000?image=685');
+    background-image: url('band6.JPG');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -315,7 +288,7 @@ img {
 .opaline {
     padding-top: 3em;
     padding-bottom: 3em;
-    background-color: rgba(128, 215, 247, 0.660);
+    background-color: rgba(40, 37, 35, 0.660);
 }
 
 .opaline h1,
@@ -340,7 +313,7 @@ img {
 }
 
 .story .container-fluid {
-    background-image: url('https://unsplash.it/3000/2000?image=531');
+    background-image: url('band7.JPG');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -364,6 +337,16 @@ img {
     color: #FFFFFF;
 }
 
+.sc{
+    margin: 0 auto;
+    height: 300px;
+    overflow: scroll;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+  }
+  .sc::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+  }
 
 /*------------------------------------*\
 	FOOTER
