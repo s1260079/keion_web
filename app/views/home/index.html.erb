@@ -23,13 +23,12 @@
                 <div class="col-md-6 opaline col-md-offset-6">
                     <div class="row">
                         <div class="col-md-offset-1 col-md-10">
-                            <h3>Ligula Mattis Ornare Ultricies</h3>
-                            <h5>Pellentesque Cursus Amet Parturient Etiam</h5>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <h4>CUO Member & Band</h4>
+                            <p>入部希望者は，部長宛てに入部希望のメールを出してください</p>
+                            <p><small>部長が入部希望を受け取り次第、メーリングリストへの登録作業を行います。登録作業が終わり次第、 サークルのシステムについて書いたメールを管理者が新入部者へ宛てて送ります。 新入部者は管理者から宛てられたメールの内容を確認後、メーリングリストに自己紹介を添えたメールを送信してください。 この時、新入部者となったあなたへもCUOからのメールが届けば入部手続きは全て終了です。</small></p>
                         </div>
                     </div>
                     <div class="row text-center">
-                        <!-- set the numbers in assets/js/scripts.js  -->
                         <div class="col-md-4 boxes col-xs-6 col-xs-offset-3 col-lg-4 col-lg-offset-1 col-md-offset-1 col-sm-6 wow fadeInUp">
                             <h5>Members</h5>
                             <h3 class="odometer 01"><%= User.count %></h3>
@@ -46,6 +45,72 @@
 </section>
 
 
+<section id="news" class="blog wow fadeInUp" data-wow-delay="300ms">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <%= image_tag 'sample.png', class: 'img-responsive' %>
+            </div>
+            <div class="col-md-7">
+                <h4>機材</h4>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod.</p>
+                <p>Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue.</p>
+                <a class="btn btn-danger btn-lg" href="#">Detail<i class="fa fa-arrow-circle-o-right"></i> </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-<h3 style="text-algin: center;">・Time Table</h3>
-<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=750&amp;wkst=1&amp;hl=ja&amp;bgcolor=%23FFFFFF&amp;src=aizucuo%40gmail.com&amp;color=%232952A3&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23528800&amp;ctz=Asia%2FTokyo" class="col-md-12" style=" border-width:0 " height="800" frameborder="0" scrolling="no"></iframe>
+<section id="history" class="story wow fadeInUp" data-wow-delay="300ms">
+    <!-- change the image in style.css to the class .story .container-fluid [approximately row 141] -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 opaline">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p class="lead"><i>Youtube</i></p>
+                            <div class="sc">
+                                <% @movies.each do |movie| %>
+                                    <h6 class="lead"> - <%= movie.title %></h6>
+                                    <p><small><%= Rinku.auto_link(movie.content, :all, 'target="_blank"').html_safe %></small></p>
+                                <% end %>
+                                <h6 class="lead">- 2020 冬季対バン</h6>
+                                <p><small>https://www.youtube.com/watch?v=F0x8PWL9ahs&list=PLZ2IIl-_gqx6i2mE7uEHb_fPKMEmwdAyo&index=1</small></p>
+                                <h6 class="lead">- 2020 冬季対バン</h6>
+                                <p><small>https://www.youtube.com/watch?v=F0x8PWL9ahs&list=PLZ2IIl-_gqx6i2mE7uEHb_fPKMEmwdAyo&index=1</small></p>
+                                <p><small>https://www.youtube.com/watch?v=F0x8PWL9ahs&list=PLZ2IIl-_gqx6i2mE7uEHb_fPKMEmwdAyo&index=1</small></p>
+                                <p><small>https://www.youtube.com/watch?v=F0x8PWL9ahs&list=PLZ2IIl-_gqx6i2mE7uEHb_fPKMEmwdAyo&index=1</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="news" class="blog wow fadeInUp" data-wow-delay="300ms">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <%= image_tag 'sample.png', class: 'img-responsive' %>
+            </div>
+            <div class="col-md-7">
+                <h4>部室</h4>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod.</p>
+                <p>Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue.</p>
+                <a class="btn btn-danger btn-lg" href="#">Detail<i class="fa fa-arrow-circle-o-right"></i> </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <h3 style="text-algin: center;">Time Table</h3>
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=750&amp;wkst=1&amp;hl=ja&amp;bgcolor=%23FFFFFF&amp;src=aizucuo%40gmail.com&amp;color=%232952A3&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23528800&amp;ctz=Asia%2FTokyo" class="col-md-12" style=" border-width:0 " height="800" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>
+
+
+
