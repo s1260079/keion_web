@@ -7,8 +7,17 @@
         <div class="col-12 col-md-12 col-lg-6" style="margin-top: 40px;">
         <p style="margin-top: 40px;"></p>
         <div style="width:90%; height:40rem;margin:  0 auto; box-shadow: 2px 2px 4px gray;">
+          <div class="row">
+          <div class="col-md-2">
+          </div>
+          <h3 class="col-md-8"  style="text-align: center;"><%= band.band_name %></h3>
+          <div class="col-md-2"  >
+            <% if current_user && current_user.id == band.user_id %>
+              <%= link_to 'Edit', edit_band_path(band),class: 'btn btn-primary' %>
+            <% end %>
+          </div>
+          </div>
 
-          <h3 style="text-align: center;"><%= band.band_name %></h3>
 
           <p style="text-align: center;">
               <%= image_tag(band.avatar_path.url, size:'180x180') %>

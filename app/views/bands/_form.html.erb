@@ -45,5 +45,8 @@ Dr : 福島 福男(OB)
         </script>
         <div class="text-center">
           <%= form.submit "Save", class: "btn btn-primary" %>
+          <% if current_user %>
+          <%= link_to 'Destroy', @band, method: :delete, data: { confirm: 'Are you sure'  } ,class: 'btn btn-danger'  %>
+          <% end %>
         </div>
 <% end %>
