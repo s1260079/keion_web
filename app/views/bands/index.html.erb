@@ -4,9 +4,39 @@
 <div class="container">
   <div class="row">
       <% @bands.each do |band| %>
-        <div class="col-12 col-md-6 col-lg-4" style="margin-top: 40px;">
-          <div><%= link_to image_tag(band.avatar_path.url, size:'270x270'), band_path(band),class: "btn btn-light" %></div>
-          <div style="font-size:25px;margin-top: 5px">・<%= link_to band.band_name, band_path(band),class: 'link' %></div>
+        <div class="col-12 col-md-12 col-lg-6" style="margin-top: 40px;">
+        <p style="margin-top: 40px;"></p>
+        <div style="width:90%; height:40rem;margin:  0 auto; box-shadow: 2px 2px 4px gray;">
+          <div class="row">
+          <h3 class="col-md-12"  style="text-align: center;"><%= band.band_name %></h3>
+          </div>
+
+
+          <p style="text-align: center;">
+              <%= image_tag(band.avatar_path.url, size:'180x180') %>
+          </p>
+
+          <div class="text-left" style="margin-bottom: 40px; margin-left: 40px;">
+            <strong style="margin-top: 20px;">MEMBERS</strong>
+            <div style="height:170px;overflow:auto;">
+              <p class="bandSpace">
+                <div style="white-space: pre-wrap;margin-left: 20px;"><%= band.band_members%></div>
+              </p>
+            </div>
+
+            <div>
+              <p class="bandSpace">
+                <strong>A FEW WORDS</strong>
+                <div style="height:70px;overflow:auto;" >　<%= band.band_message %></div>
+              </p>
+            </div>
+          </div>
+            <div style=" margin-left: 24rem;">
+              <% if current_user && current_user.id == band.user_id %>
+                ＜<%= link_to 'edit', edit_band_path(band),class: 'link' %>＞
+              <% end %>
+            </div>
+        </div>
         </div>
       <% end %>
   </div>
