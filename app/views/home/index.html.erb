@@ -12,8 +12,40 @@
             <div class="col-md-5">
                 <a class="twitter-timeline" href="https://twitter.com/CUO_aizu?ref_src=twsrc%5Etfw" width="400px" height="600px">Tweets by CUO_aizu</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-            <h3 style="text-algin: center;">・Time Table</h3>
-            <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=750&amp;wkst=1&amp;hl=ja&amp;bgcolor=%23FFFFFF&amp;src=aizucuo%40gmail.com&amp;color=%232952A3&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23528800&amp;ctz=Asia%2FTokyo" class="col-md-12" style=" border-width:0 " height="800" frameborder="0" scrolling="no"></iframe>
         </div>
     </div>
 </section>
+<section id="about" class="number wow fadeInUp" data-wow-delay="300ms">
+    <!-- change the image in style.css to the class .number .container-fluid [approximately row 102] -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 opaline col-md-offset-6">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-10">
+                            <h3>Ligula Mattis Ornare Ultricies</h3>
+                            <h5>Pellentesque Cursus Amet Parturient Etiam</h5>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <!-- set the numbers in assets/js/scripts.js  -->
+                        <div class="col-md-4 boxes col-xs-6 col-xs-offset-3 col-lg-4 col-lg-offset-1 col-md-offset-1 col-sm-6 wow fadeInUp">
+                            <h5>Members</h5>
+                            <h3 class="odometer 01"><%= User.count %></h3>
+                        </div>
+                        <div class="col-md-4 boxes col-xs-6 col-xs-offset-3 col-lg-4 col-lg-offset-2 col-md-offset-2 col-sm-6 wow fadeInUp" data-wow-delay="300ms">
+                            <h5>Bands</h5>
+                            <h3 class="odometer 02"><%= Band.count %></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<h3 style="text-algin: center;">・Time Table</h3>
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=750&amp;wkst=1&amp;hl=ja&amp;bgcolor=%23FFFFFF&amp;src=aizucuo%40gmail.com&amp;color=%232952A3&amp;src=ja.japanese%23holiday%40group.v.calendar.google.com&amp;color=%23528800&amp;ctz=Asia%2FTokyo" class="col-md-12" style=" border-width:0 " height="800" frameborder="0" scrolling="no"></iframe>
