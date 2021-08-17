@@ -8,14 +8,7 @@
         <p style="margin-top: 40px;"></p>
         <div style="width:90%; height:40rem;margin:  0 auto; box-shadow: 2px 2px 4px gray;">
           <div class="row">
-          <div class="col-md-2">
-          </div>
-          <h3 class="col-md-8"  style="text-align: center;"><%= band.band_name %></h3>
-          <div class="col-md-2"  >
-            <% if current_user && current_user.id == band.user_id %>
-              <%= link_to 'Edit', edit_band_path(band),class: 'btn btn-primary' %>
-            <% end %>
-          </div>
+          <h3 class="col-md-12"  style="text-align: center;"><%= band.band_name %></h3>
           </div>
 
 
@@ -24,7 +17,7 @@
           </p>
 
           <div class="text-left" style="margin-bottom: 40px; margin-left: 40px;">
-            <strong>MEMBERS</strong>
+            <strong style="margin-top: 20px;">MEMBERS</strong>
             <div style="height:170px;overflow:auto;">
               <p class="bandSpace">
                 <div style="white-space: pre-wrap;margin-left: 20px;"><%= band.band_members%></div>
@@ -38,6 +31,11 @@
               </p>
             </div>
           </div>
+            <div style=" margin-left: 24rem;">
+              <% if current_user && current_user.id == band.user_id %>
+                ＜<%= link_to 'edit', edit_band_path(band),class: 'link' %>＞
+              <% end %>
+            </div>
         </div>
         </div>
       <% end %>
