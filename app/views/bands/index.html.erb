@@ -27,13 +27,13 @@
             <div>
               <p class="bandSpace">
                 <strong>A FEW WORDS</strong>
-                <div style="height:70px;overflow:auto;" >　<%= band.band_message %></div>
+                <div style="height:60px;overflow:auto;" >　<%= band.band_message %></div>
               </p>
             </div>
           </div>
-            <div style=" margin-left: 24rem;">
+            <div style=" text-align: center;">
               <% if current_user && current_user.id == band.user_id %>
-                ＜<%= link_to 'edit', edit_band_path(band),class: 'link' %>＞
+                <%= link_to "More",  edit_band_path(band), class: 'btn btn-outline-dark' %>
               <% end %>
             </div>
         </div>
