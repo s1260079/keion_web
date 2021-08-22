@@ -3,6 +3,7 @@
 /*------------------------------------*\
 	HEADER
 \*------------------------------------*/
+
 p,
 h1,
 h2,
@@ -274,6 +275,7 @@ img {
     bottom: 0;
 }
 
+
 /*------------------------------------*\
 	SECTIONS
 \*------------------------------------*/
@@ -337,16 +339,21 @@ img {
     color: #FFFFFF;
 }
 
-.sc{
+.sc {
     margin: 0 auto;
     height: 300px;
     overflow: scroll;
-    -ms-overflow-style: none;    /* IE, Edge 対応 */
-    scrollbar-width: none;       /* Firefox 対応 */
-  }
-  .sc::-webkit-scrollbar {  /* Chrome, Safari 対応 */
-    display:none;
-  }
+    -ms-overflow-style: none;
+    /* IE, Edge 対応 */
+    scrollbar-width: none;
+    /* Firefox 対応 */
+}
+
+.sc::-webkit-scrollbar {
+    /* Chrome, Safari 対応 */
+    display: none;
+}
+
 
 /*------------------------------------*\
 	FOOTER
@@ -413,4 +420,9 @@ h2 {
 .link {
     text-decoration: none;
     color: #444444;
+}
+
+.home-text {
+    font-size: 160%;
+    font-size: 1.4vw;
 }
