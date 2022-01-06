@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_09_005327) do
+ActiveRecord::Schema.define(version: 2022_01_06_083325) do
 
   create_table "bands", force: :cascade do |t|
     t.string "band_name", null: false
@@ -19,16 +19,15 @@ ActiveRecord::Schema.define(version: 2021_08_09_005327) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.string "image_id"
     t.string "avatar_path"
   end
 
   create_table "movies", force: :cascade do |t|
     t.string "title", null: false
     t.string "content", null: false
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,8 +41,8 @@ ActiveRecord::Schema.define(version: 2021_08_09_005327) do
     t.string "part"
     t.text "like_band"
     t.text "message"
-    t.string "avatar_path"
     t.integer "judgment"
+    t.string "avatar_path"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
