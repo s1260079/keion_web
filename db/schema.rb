@@ -16,8 +16,6 @@ ActiveRecord::Schema.define(version: 2022_01_06_104303) do
     t.string "band_name"
     t.text "band_members"
     t.text "band_message"
-    t.integer "user_id"
-    t.string "avatar_path"
     t.string "password"
     t.string "password_confirmation"
     t.datetime "created_at", null: false
