@@ -33,7 +33,7 @@
           </div>
             <div style=" text-align: center;">
               <% if current_user && current_user.id == band.user_id %>
-                <%= link_to "More",  edit_band_path(band), class: 'btn btn-outline-dark' %>
+                <%= link_to "編集",  edit_band_path(band), class: 'btn btn-outline-dark' %>
               <% end %>
             </div>
         </div>

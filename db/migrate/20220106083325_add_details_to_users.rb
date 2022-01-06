@@ -1,5 +1,7 @@
 class AddDetailsToUsers < ActiveRecord::Migration[5.2]
   def change
+    add_column :users, :judgment, :integer
     add_column :users, :avatar_path, :string
+
   end
 end
