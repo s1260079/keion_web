@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_06_104303) do
+ActiveRecord::Schema.define(version: 2022_01_06_142433) do
 
   create_table "bands", force: :cascade do |t|
     t.string "band_name"
     t.text "band_members"
     t.text "band_message"
+    t.integer "user_id"
+    t.string "avatar_path"
     t.string "password"
     t.string "password_confirmation"
     t.datetime "created_at", null: false
