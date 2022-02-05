@@ -507,3 +507,52 @@ h2 {
     .snsbtniti2 li{
     flex:0 0 48%;
     }
+    .flowbtn13{
+        font-family:'Arial', sans-serif;
+        display:inline-block;
+        width:90%;
+        font-size:30px;
+        text-align:left;
+        border-bottom:dotted 1px #bbb;
+        text-decoration:none;
+        }
+        /* マウスホバー時に下線を消す */
+        .flowbtn13:hover{
+        text-decoration:none;
+    }
+    /* Instagram */
+    .flowbtn13 .fa-instagram{
+    color:#c6529a;
+    }
+    /* Instagramマウスホバー時 */
+    .insta_btn13 span:hover{
+    color:#c6529a;
+    }
+    /* テキスト調整 */
+    .flowbtn13 span{
+    font-size:16px;
+    position:relative;
+    left:8px;
+    bottom:6px;
+    color:#666;
+    }
+    /* テキストマウスホバー時*/
+    .flowbtn13 span:hover{
+     transition: .5s;
+    font-weight:bold;
+    margin-left:5px;
+    }
+    /* ulタグの内側余白を０にする */
+    ul.snsbtniti2{
+    padding:0!important;
+    }
+    /* 全体の位置 */
+    .snsbtniti2{
+    display:flex;
+    flex-flow:row wrap;
+    }
+    /* 要素同士の余白 */
+    .snsbtniti2 li{
+    flex:0 0 48%;
+    text-align:center!important;
+    }
