@@ -1,0 +1,40 @@
+<div class="title">
+    <h2 >登録</h2>
+</div>
+<div class="allPage">
+  <div class="container">
+    <%= form_with(model: @environment, local: true) do |form| %>
+        <div class="field">
+          <%= form.label :title1, "見出し１" %>
+          <%= form.text_field :title1, :placeholder => "機材の使い⽅" ,class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :title2, "見出し２" %>
+          <%= form.text_field :title2, :placeholder => "◎ギターアンプ" ,class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :title2, "見出し3" %>
+          <%= form.text_field :title2, :placeholder => "1.1. 使い⽅" ,class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :text, "本文" %>
+          <%= form.text_area :text,
+          :placeholder => "
+   ①機材が適切に接続しているかを確認。
+   ・アンプのコンセント
+   ・アンプとキャビネット間のスピーカーケーブル
+   ・アンプとギター間のシールド
+   ・アンプとフットスイッチのシールド
+   ②MASTERのVolumeノブが0になっていることを確認
+   ③POWERをONにする。
+   ④各⾃好きに⾳作りをする。 
+          " ,
+          :size=>"10x10" ,class: "form-control" %>
+        </div>
+        <div class="text-center">
+          <%= form.submit "Save", class: "btn btn-primary" %>
+        </div>
+<% end %>
+
+  </div>
+</div>
