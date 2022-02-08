@@ -1,0 +1,28 @@
+<% form_for @environment, :url => path_to_create_action do |form| %>
+        <div class="field">
+          <%= form.label :title1, "見出し１" %>
+          <%= form.text_field :title1, :placeholder => "機材の使い⽅" ,class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :title2, "見出し２" %>
+          <%= form.text_field :title2, :placeholder => "◎ギターアンプ" ,class: "form-control" %>
+        </div>
+        <div class="field">
+          <%= form.label :text, "本文" %>
+          <%= form.text_area :text,
+          :placeholder => "  1.1. 使い⽅
+   ①機材が適切に接続しているかを確認。
+   ・アンプのコンセント
+   ・アンプとキャビネット間のスピーカーケーブル
+   ・アンプとギター間のシールド
+   ・アンプとフットスイッチのシールド
+   ②MASTERのVolumeノブが0になっていることを確認
+   ③POWERをONにする。
+   ④各⾃好きに⾳作りをする。 
+          " ,
+          :size=>"10x10" ,class: "form-control" %>
+        </div>
+        <div class="text-center">
+          <%= form.submit "Save", class: "btn btn-primary" %>
+        </div>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_06_142433) do
+ActiveRecord::Schema.define(version: 2022_02_08_183422) do
 
   create_table "bands", force: :cascade do |t|
     t.string "band_name"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2022_01_06_142433) do
     t.string "avatar_path"
     t.string "password"
     t.string "password_confirmation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "environments", force: :cascade do |t|
+    t.string "title1"
+    t.string "title2"
+    t.string "title3"
+    t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
