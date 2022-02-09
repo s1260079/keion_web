@@ -3,7 +3,7 @@ class BandsController < ApplicationController
   before_action :set_band, only: %i[show edit update destroy]
 
   def index
-    @bands = Band.all
+    @bands = Band.all.order("id")
   end
 
   def show; end

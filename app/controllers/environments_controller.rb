@@ -3,7 +3,7 @@ class EnvironmentsController < ApplicationController
     before_action :set_environment, only: %i[show edit update destroy]
 
     def index
-      @environments = Environment.all
+      @environments = Environment.all.order("id")
     end
 
     def show; end
